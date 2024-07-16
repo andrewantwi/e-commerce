@@ -1,18 +1,34 @@
+import { NavLink } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbar-start">
-        <a className="navbar-item">Men</a>
-        <a className="navbar-item">Women</a>
-        <a className="navbar-item">Kids</a>
+        <NavLink to="categories" className="navbar-item">
+          Men
+        </NavLink>
+        <NavLink to="categories" className="navbar-item">
+          Women
+        </NavLink>
+        <NavLink to="categories" className="navbar-item">
+          Kids
+        </NavLink>
       </div>
       <div className="navbar-center">
-        <a className="navbar-item">Ecommerce Buddy</a>
+        <NavLink to="categories" className="navbar-item">
+          Ecommerce Buddy
+        </NavLink>
       </div>
       <div className="navbar-end">
-        <a className="navbar-item">Home</a>
-        <a className="navbar-item">About</a>
-        <a className="navbar-item">Contact</a>
+        <NavLink to="/" className="navbar-item">
+          Home
+        </NavLink>
+        <NavLink to="categories" className="navbar-item">
+          About
+        </NavLink>
+        <NavLink to="categories" className="navbar-item">
+          Contact
+        </NavLink>
         <div className="avatar avatar-ring avatar-md">
           <div className="dropdown-container">
             <div className="dropdown">
@@ -26,13 +42,23 @@ const Navbar = () => {
                 />
               </label>
               <div className="dropdown-menu dropdown-menu-bottom-left">
-                <a className="dropdown-item text-sm">Profile</a>
-                <a tabIndex={-1} className="dropdown-item text-sm">
+                <NavLink to="categories" className="dropdown-item text-sm">
+                  Profile
+                </NavLink>
+                <NavLink
+                  to="categories"
+                  tabIndex={-1}
+                  className="dropdown-item text-sm"
+                >
                   Account settings
-                </a>
-                <a tabIndex={-1} className="dropdown-item text-sm">
+                </NavLink>
+                <NavLink
+                  to="categories"
+                  tabIndex={-1}
+                  className="dropdown-item text-sm"
+                >
                   Subscriptions
-                </a>
+                </NavLink>
               </div>
             </div>
           </div>

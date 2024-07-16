@@ -1,7 +1,6 @@
 import Hero from "../components/Hero";
 import Carousel from "../components/Carousel";
 import Categories from "../components/Categories";
-import Footer from "../components/Footer";
 
 const HomePage = () => {
   return (
@@ -9,7 +8,6 @@ const HomePage = () => {
       <Hero />
       <Carousel />
       <Categories />
-      <Footer />
     </div>
   );
 };
