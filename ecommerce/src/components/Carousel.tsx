@@ -1,13 +1,8 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import ProductCard from "./Card";
 
 const Carousel: React.FC = () => {
   const sliderRef = useRef<HTMLDivElement>(null);
-  const [setIsVisible] = useState(true);
-
-  const toggleVisibility = () => {
-    setIsVisible(!isVisible);
-  };
 
   const scrollLeft = () => {
     if (sliderRef.current) {
@@ -37,7 +32,7 @@ const Carousel: React.FC = () => {
         <div className="absolute top-1/2 left-0 transform -translate-y-1/2 z-10">
           <button
             onClick={scrollLeft}
-            className="bg-gray-400 p-2 rounded-full shadow-md hover:bg-gray-300"
+            className="p-2 border shadow-md hover:bg-white hover:text-black"
           >
             &lt;
           </button>
@@ -61,7 +56,7 @@ const Carousel: React.FC = () => {
         <div className="absolute top-1/2 right-0 transform -translate-y-1/2 z-10">
           <button
             onClick={scrollRight}
-            className="bg-gray-400 p-2 rounded-full shadow-md hover:bg-gray-300"
+            className="p-2 border shadow-md hover:bg-white hover:text-black"
           >
             &gt;
           </button>

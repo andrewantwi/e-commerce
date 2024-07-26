@@ -4,22 +4,22 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbar-start">
-        <NavLink to="categories" className="navbar-item">
+        <NavLink to="categories/men" className="navbar-item">
           Men
         </NavLink>
-        <NavLink to="categories" className="navbar-item">
+        <NavLink to="categories/women" className="navbar-item">
           Women
         </NavLink>
-        <NavLink to="categories" className="navbar-item">
+        <NavLink to="categories/kids" className="navbar-item">
           Kids
         </NavLink>
       </div>
-      <div className="navbar-center">
+      <div className="navbar-center lg:hidden ">
         <NavLink to="categories" className="navbar-item">
           Ecommerce Buddy
         </NavLink>
       </div>
-      <div className="navbar-end">
+      {/* <div className="lg:hidden navbar-end">
         <NavLink to="/" className="navbar-item">
           Home
         </NavLink>
@@ -29,7 +29,7 @@ const Navbar = () => {
         <NavLink to="categories" className="navbar-item">
           Contact
         </NavLink>
-        <div className="avatar avatar-ring avatar-md">
+        <div className="lg:hidden avatar avatar-ring avatar-md">
           <div className="dropdown-container">
             <div className="dropdown">
               <label
@@ -63,7 +63,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
