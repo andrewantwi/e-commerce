@@ -1,5 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import men from "../assets/men.jpg";
+import women from "../assets/women.jpg";
+import kids from "../assets/kids.webp";
 
 interface Category {
   title: string;
@@ -11,20 +14,17 @@ const categories: Category[] = [
   {
     link: "categories/men",
     title: "Men",
-    imageUrl:
-      "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+    imageUrl: men,
   },
   {
     link: "categories/women",
     title: "Women",
-    imageUrl:
-      "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+    imageUrl: women,
   },
   {
     link: "categories/kids",
     title: "Kids",
-    imageUrl:
-      "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+    imageUrl: kids,
   },
 ];
 

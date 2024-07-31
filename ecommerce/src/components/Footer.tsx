@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
                         className="w-16"
                       />
                     </span>
-                    <span className="text-white">Logo</span>
+                    <span className="text-white">E-commerce</span>
                   </div>
                 </a>
               </div>

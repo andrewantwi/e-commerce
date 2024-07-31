@@ -1,12 +1,11 @@
-const ProductCard: React.FC = () => {
+interface ProductCardProps {
+  image: string; // Define the expected prop types
+}
+const ProductCard: React.FC<ProductCardProps> = ({ image }) => {
   return (
     <div className="relative m-10 flex w-full max-w-xs flex-col overflow-hidden border border-gray-400 bg-opacity-20 backdrop-blur-lg backdrop-filter shadow-md">
       <a className="relative mx-3 mt-3 flex h-60 overflow-hidden " href="#">
-        <img
-          className="object-cover"
-          src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-          alt="product image"
-        />
+        <img className="object-cover w-full" src={image} alt="product image" />
         <span className="absolute top-0 left-0 m-2  bg-black px-2 text-center text-sm font-medium text-white">
           39% OFF
         </span>

@@ -1,6 +1,14 @@
 import React, { useRef } from "react";
 import ProductCard from "./Card";
-
+import ww9 from "../assets/ww9.jpeg";
+import ww10 from "../assets/ww10.webp";
+import sh9 from "../assets/sh9.jpg";
+import tw1 from "../assets/tw1.jpg";
+import tw2 from "../assets/tw2.webp";
+import w4 from "../assets/w4.webp";
+import w5 from "../assets/w5.jpg";
+import sh3 from "../assets/sh3.jpg";
+import sh4 from "../assets/sh4.jpg";
 const Carousel: React.FC = () => {
   const sliderRef = useRef<HTMLDivElement>(null);
 
@@ -44,12 +52,15 @@ const Carousel: React.FC = () => {
           style={{ scrollSnapType: "x mandatory" }}
         >
           <div className="flex">
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
+            <ProductCard image={ww9} />
+            <ProductCard image={sh9} />
+            <ProductCard image={ww10} />
+            <ProductCard image={sh4} />
+            <ProductCard image={sh3} />
+            <ProductCard image={tw2} />
+            <ProductCard image={tw1} />
+            <ProductCard image={w4} />
+            <ProductCard image={w5} />
           </div>
         </div>
 
