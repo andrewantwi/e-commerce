@@ -8,6 +8,7 @@ interface ModalProps {
     brand: string;
     productName: string;
     price: number;
+    available: boolean;
     originalPrice: number;
   } | null;
 }
@@ -68,7 +69,7 @@ const Modal: React.FC<ModalProps> = ({ show, onClose, product }) => {
                   Availability:
                 </span>
                 <span className="text-gray-600 dark:text-gray-300">
-                  In Stock
+                  {product.available ? "In Stock" : "Out of stock"}
                 </span>
               </div>
             </div>

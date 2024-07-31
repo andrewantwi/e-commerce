@@ -4,6 +4,7 @@ export interface Product {
   productName: string;
   price: number;
   originalPrice: number;
+  available: boolean;
 }
 
 export const products: Product[] = [
@@ -14,6 +15,7 @@ export const products: Product[] = [
     productName: "Product Name",
     price: 149,
     originalPrice: 199,
+    available: true,
   },
   {
     imageSrc:
@@ -22,6 +24,7 @@ export const products: Product[] = [
     productName: "Product Name",
     price: 149,
     originalPrice: 199,
+    available: true,
   },
   {
     imageSrc:
@@ -30,6 +33,7 @@ export const products: Product[] = [
     productName: "Product Name",
     price: 149,
     originalPrice: 199,
+    available: true,
   },
   {
     imageSrc:
@@ -38,6 +42,7 @@ export const products: Product[] = [
     productName: "Product Name",
     price: 149,
     originalPrice: 199,
+    available: true,
   },
   {
     imageSrc:
@@ -46,6 +51,7 @@ export const products: Product[] = [
     productName: "Product Name",
     price: 149,
     originalPrice: 199,
+    available: true,
   },
   {
     imageSrc:
@@ -54,6 +60,7 @@ export const products: Product[] = [
     productName: "Product Name",
     price: 149,
     originalPrice: 199,
+    available: true,
   },
   {
     imageSrc:
@@ -62,6 +69,7 @@ export const products: Product[] = [
     productName: "Product Name",
     price: 149,
     originalPrice: 199,
+    available: true,
   },
   {
     imageSrc:
@@ -70,6 +78,7 @@ export const products: Product[] = [
     productName: "Product Name",
     price: 149,
     originalPrice: 199,
+    available: true,
   },
   {
     imageSrc:
@@ -78,6 +87,7 @@ export const products: Product[] = [
     productName: "Product Name",
     price: 149,
     originalPrice: 199,
+    available: true,
   },
   {
     imageSrc:
@@ -86,6 +96,7 @@ export const products: Product[] = [
     productName: "Product Name",
     price: 149,
     originalPrice: 199,
+    available: true,
   },
 ];
 
@@ -93,4 +104,5 @@ export const tabs = [
   { id: "Watches", label: "Watches" },
   { id: "shirts", label: "shirts" },
   { id: "Trousers", label: "Trousers" },
+  { id: "Shoes", label: "Shoes" },
 ];

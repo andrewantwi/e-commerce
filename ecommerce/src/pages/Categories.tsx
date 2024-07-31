@@ -8,7 +8,7 @@ const Categories = () => {
     <>
       <CategoriesHero categoryType={categoryType} />
 
-      <Categories2 />
+      <Categories2 categoryType={categoryType} />
     </>
   );
 };
