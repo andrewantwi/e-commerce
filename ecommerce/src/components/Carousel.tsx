@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import ProductCard from "./Card";
 import ww9 from "../assets/ww9.jpeg";
 import ww10 from "../assets/ww10.webp";
@@ -9,7 +9,16 @@ import w4 from "../assets/w4.webp";
 import w5 from "../assets/w5.jpg";
 import sh3 from "../assets/sh3.jpg";
 import sh4 from "../assets/sh4.jpg";
+import Modal from "./Modal2";
 const Carousel: React.FC = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [currentProduct, setCurrentProduct] = useState<{
+    imageSrc: string;
+    productName: string;
+    price: number;
+    available: boolean;
+  } | null>(null);
+
   const sliderRef = useRef<HTMLDivElement>(null);
 
   const scrollLeft = () => {
@@ -29,9 +38,85 @@ const Carousel: React.FC = () => {
       });
     }
   };
+  const handleCardClick = (product: {
+    imageSrc: string;
+    productName: string;
+    price: number;
+    available: boolean;
+  }) => {
+    setCurrentProduct(product);
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    setCurrentProduct(null);
+  };
+
+  const products = [
+    {
+      imageSrc: w5,
+      productName: "Nike Air MX Super 2500 - Red",
+      price: 449,
+      available: true,
+    },
+    {
+      imageSrc: w4,
+      productName: "Nike Air MX Super 2500 - Red",
+      price: 449,
+      available: true,
+    },
+    {
+      imageSrc: sh4,
+      productName: "Nike Air MX Super 2500 - Red",
+      price: 449,
+      available: true,
+    },
+    {
+      imageSrc: sh9,
+      productName: "Nike Air MX Super 2500 - Red",
+      price: 449,
+      available: true,
+    },
+    {
+      imageSrc: ww9,
+      productName: "Nike Air MX Super 2500 - Red",
+      price: 449,
+      available: true,
+    },
+    {
+      imageSrc: ww10,
+      productName: "Nike Air MX Super 2500 - Red",
+      price: 449,
+      available: true,
+    },
+    {
+      imageSrc: sh3,
+      productName: "Nike Air MX Super 2500 - Red",
+      price: 449,
+      available: true,
+    },
+    {
+      imageSrc: tw1,
+      productName: "Nike Air MX Super 2500 - Red",
+      price: 449,
+      available: true,
+    },
+    {
+      imageSrc: tw2,
+      productName: "Nike Air MX Super 2500 - Red",
+      price: 449,
+      available: true,
+    },
+  ];
 
   return (
     <div>
+      <Modal
+        show={showModal}
+        onClose={handleCloseModal}
+        product={currentProduct}
+      />
       <div className="text-start p-10">
         <h1 className="font-bold text-4xl mb-4">New Arrivals</h1>
       </div>
@@ -52,15 +137,13 @@ const Carousel: React.FC = () => {
           style={{ scrollSnapType: "x mandatory" }}
         >
           <div className="flex">
-            <ProductCard image={ww9} />
-            <ProductCard image={sh9} />
-            <ProductCard image={ww10} />
-            <ProductCard image={sh4} />
-            <ProductCard image={sh3} />
-            <ProductCard image={tw2} />
-            <ProductCard image={tw1} />
-            <ProductCard image={w4} />
-            <ProductCard image={w5} />
+            {products.map((product, index) => (
+              <ProductCard
+                key={index}
+                image={product.imageSrc}
+                onClick={() => handleCardClick(product)}
+              />
+            ))}
           </div>
         </div>
 
