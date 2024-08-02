@@ -5,7 +5,6 @@ interface ModalProps {
   onClose: () => void;
   product: {
     imageSrc: string;
-    brand: string;
     productName: string;
     price: number;
     originalPrice: number;
