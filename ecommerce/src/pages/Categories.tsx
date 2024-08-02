@@ -4,11 +4,12 @@ import { useParams } from "react-router-dom";
 
 const Categories = () => {
   const { categoryType } = useParams<{ categoryType: string }>();
+  const categoryValue: string = categoryType || "men";
   return (
     <>
-      <CategoriesHero categoryType={categoryType} />
+      <CategoriesHero categoryType={categoryValue} />
 
-      <Categories2 categoryType={categoryType} />
+      <Categories2 categoryType={categoryValue} />
     </>
   );
 };
