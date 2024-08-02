@@ -43,6 +43,7 @@ const Carousel: React.FC = () => {
     imageSrc: string;
     productName: string;
     price: number;
+    originalPrice: number;
     available: boolean;
   }) => {
     setCurrentProduct(product);
