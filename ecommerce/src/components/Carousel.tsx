@@ -15,6 +15,7 @@ const Carousel: React.FC = () => {
   const [currentProduct, setCurrentProduct] = useState<{
     imageSrc: string;
     productName: string;
+    originalPrice: number;
     price: number;
     available: boolean;
   } | null>(null);
