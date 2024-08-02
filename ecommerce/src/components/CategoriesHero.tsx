@@ -1,6 +1,6 @@
 import React from "react";
 import img from "../assets/Daco_2432799.png";
-import img2 from "../assets/pngfind.com-indian-girl-png-119377.png";
+import img2 from "../assets/Model-PNG.png";
 
 interface CategoriesHeroProps {
   categoryType: string;
